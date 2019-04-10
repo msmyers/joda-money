@@ -85,7 +85,7 @@ public class TestCurrencyUnit {
 
     @Test //(expected = IllegalArgumentException.class)
     public void test_registeredCurrency_invalidStringCode_2letters() {
-        CurrencyUnit.registerCurrency("AB", 991, 2, Arrays.asList("TS"));
+        CurrencyUnit.registerCurrency("AB", 996, 2, Arrays.asList("TS"));
     }
 
     @Test //(expected = IllegalArgumentException.class)
