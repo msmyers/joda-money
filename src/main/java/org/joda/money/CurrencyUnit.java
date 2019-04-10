@@ -56,7 +56,7 @@ public final class CurrencyUnit implements Comparable<CurrencyUnit>, Serializabl
     /**
      * The currency code pattern.
      */
-    private static final Pattern CODE = Pattern.compile("[A-Z][A-Z][A-Z]");
+    private static final Pattern CODE = Pattern.compile("[A-Z]{2,4}");
     /**
      * Map of registered currencies by text code.
      */
@@ -194,7 +194,7 @@ public final class CurrencyUnit implements Comparable<CurrencyUnit>, Serializabl
     public static synchronized CurrencyUnit registerCurrency(
                     String currencyCode, int numericCurrencyCode, int decimalPlaces, List<String> countryCodes, boolean force) {
         MoneyUtils.checkNotNull(currencyCode, "Currency code must not be null");
-        if (currencyCode.length() != 3) {
+        if (currencyCode.length() > 5 || currencyCode.length() < 2) {
             throw new IllegalArgumentException("Invalid string code, must be length 3");
         }
         if (CODE.matcher(currencyCode).matches() == false) {
