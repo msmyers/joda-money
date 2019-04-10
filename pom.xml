@@ -14,7 +14,7 @@
   <artifactId>joda-money</artifactId>
   <packaging>jar</packaging>
   <name>Joda-Money</name>
-  <version>1.0.2-SNAPSHOT</version>
+  <version>1.0.2-CUSTOMIZED</version>
   <description>Money representation and formatting</description>
   <url>https://www.joda.org/${joda.artifactId}/</url>
 
